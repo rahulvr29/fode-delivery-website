@@ -1,0 +1,12 @@
+
+body{
+  position: relative;
+}
+.logo{
+  position: absolute;
+  top: -60px;
+  left: -50px;
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+}
