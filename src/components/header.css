@@ -4,9 +4,25 @@ body{
 }
 .logo{
   position: absolute;
-  top: -60px;
-  left: -50px;
+  top: -75px;
+  left: -80px;
   width: 250px;
   height: auto;
   cursor: pointer;
+}
+
+
+@media only screen and (min-width: 779px) {
+  .logo{
+    position: absolute;
+    top: -50px;
+    left: -50px;}
+
+}
+@media only screen and (min-width: 996px) {
+  .logo{
+    position: absolute;
+    top: -50px;
+    left: -50px;}
+
 }
