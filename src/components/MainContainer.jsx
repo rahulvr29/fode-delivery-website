@@ -5,13 +5,16 @@ import { motion } from "framer-motion";
 import { useStateValue } from "../context/StateProvider";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from './RowContainer';
+import CategoriesContainer from './CategoriesContainer';
+import CartContainer from './CartContainer';
 
 const MainContainer = () => {
 
   const [{ foodItems, cartShow }, dispatch] = useStateValue();
-  const [scrollValue, setScrollValue] = useState(0);
-
-  useEffect(() => {}, [scrollValue, cartShow]);
+  const [scrollValue, setScrollValue] = useState(0)
+  
+  useEffect(()=>{}, [scrollValue])
+  
   return (
     <div className='w-full h-auto flex flex-col items-center justify-center '>
       <HomeContainer/>
@@ -41,8 +44,16 @@ const MainContainer = () => {
         </div>
         <RowContainer 
           scrollValue={scrollValue}
+          
           flag={true}
           data={foodItems?.filter((n) => n.category === "fruits")}/>
+      </section>
+
+      <section className='w-full my-6 '>
+        <CategoriesContainer/>
+
+        {cartShow && <CartContainer/>}
+        
       </section>
     </div>
   )
