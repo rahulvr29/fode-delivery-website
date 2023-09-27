@@ -77,8 +77,6 @@ const CartContainer = () => {
               }
           </div>
 
-
-                
           {/* cart total section */}
           <div className="w-full flex-1 bg-cartTotal rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2">
             <div className="w-full flex items-center justify-between">
